@@ -2,7 +2,7 @@ name: remote ssh command
 on: [push]
 jobs:
   build:
-    name: Build
+    name: deploy
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh comands using key
@@ -13,4 +13,4 @@ jobs:
         key: ${{secrets.KEY}}
         port: ${{secrets.PORT}}
         script: |
-          ./deploy.sh
+          ./scripts/deploy.sh
