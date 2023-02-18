@@ -18,6 +18,13 @@ app.get('/third', (req, res)=>{
         test: '세 번째 cicd 입니다!'
     })
 });
+
+app.get('/fourth', (req, res)=>{
+    res.json({
+        test: '네 번째 cicd 입니다!!'
+    })
+});
+
 app.listen(port, () => {
     console.log(port, '번 포트에서 대기 중');
 });
